@@ -1,0 +1,121 @@
+ID,Question Difficulty,User Question,Model,citation,accurate,thorough,useful,organized,comprehensible,succinct,abstraction,synthesized,voice_summ,voice_note
+Q001,Easy,What is the dose of my blood pressure medication?,Qwen 2.5: 1.5B,1,5,5,5,5,5,5,0,NA,0,0
+Q001,Easy,What is the dose of my blood pressure medication?,Qwen 2.5: 3B,1,5,5,5,5,5,5,0,NA,0,0
+Q001,Easy,What is the dose of my blood pressure medication?,Llama 3.2 3B,1,5,5,5,5,5,5,0,NA,0,0
+Q001,Easy,What is the dose of my blood pressure medication?,gemini-3.1-pro,1,5,5,4,5,4,4,0,NA,0,0
+Q002,Easy,Do I have a documented allergy to penicillin?,Qwen 2.5: 1.5B,1,5,5,5,5,5,4,0,NA,0,0
+Q002,Easy,Do I have a documented allergy to penicillin?,Qwen 2.5: 3B,1,5,5,5,5,5,5,0,NA,0,0
+Q002,Easy,Do I have a documented allergy to penicillin?,Llama 3.2 3B,1,5,5,5,5,5,4,0,NA,0,0
+Q002,Easy,Do I have a documented allergy to penicillin?,gemini-3.1-pro,1,5,5,5,5,5,4,0,NA,0,0
+Q003,Easy,What was my last A1c result?,Qwen 2.5: 1.5B,3,2,4,4,5,5,4,0,NA,0,0
+Q003,Easy,What was my last A1c result?,Qwen 2.5: 3B,1,2,5,4,5,5,4,0,NA,0,0
+Q003,Easy,What was my last A1c result?,Llama 3.2 3B,3,5,5,5,5,5,5,0,NA,0,0
+Q003,Easy,What was my last A1c result?,gemini-3.1-pro,1,5,5,5,5,4,4,0,NA,0,0
+Q004,Easy,When was I diagnosed with asthma?,Qwen 2.5: 1.5B,1,5,5,5,5,5,5,0,NA,0,0
+Q004,Easy,When was I diagnosed with asthma?,Qwen 2.5: 3B,1,5,4,5,5,5,5,0,NA,0,0
+Q004,Easy,When was I diagnosed with asthma?,Llama 3.2 3B,1,5,5,5,5,5,5,0,NA,0,0
+Q004,Easy,When was I diagnosed with asthma?,gemini-3.1-pro,1,5,5,4,5,4,4,0,NA,0,0
+Q005,Easy,What was my weight at my last doctor's visit?,Qwen 2.5: 1.5B,1,5,5,5,5,5,5,0,NA,0,0
+Q005,Easy,What was my weight at my last doctor's visit?,Qwen 2.5: 3B,1,5,5,5,5,5,5,0,NA,0,0
+Q005,Easy,What was my weight at my last doctor's visit?,Llama 3.2 3B,1,5,5,5,5,5,5,0,NA,0,0
+Q005,Easy,What was my weight at my last doctor's visit?,gemini-3.1-pro,3,5,4,4,5,4,4,0,NA,0,0
+Q006,Easy,Did I have a colonoscopy in 2021?,Qwen 2.5: 1.5B,1,5,4,5,5,5,5,0,NA,0,0
+Q006,Easy,Did I have a colonoscopy in 2021?,Qwen 2.5: 3B,1,5,5,5,5,5,4,0,NA,0,0
+Q006,Easy,Did I have a colonoscopy in 2021?,Llama 3.2 3B,1,5,4,5,5,5,5,0,NA,0,0
+Q006,Easy,Did I have a colonoscopy in 2021?,gemini-3.1-pro,1,5,5,5,5,5,4,0,NA,0,0
+Q007,Easy,Who did I see for my dermatology appointment last month?,Qwen 2.5: 1.5B,1,5,5,5,5,5,5,0,NA,0,0
+Q007,Easy,Who did I see for my dermatology appointment last month?,Qwen 2.5: 3B,1,5,5,5,5,5,4,0,NA,0,0
+Q007,Easy,Who did I see for my dermatology appointment last month?,Llama 3.2 3B,3,5,5,5,5,5,5,0,NA,0,0
+Q007,Easy,Who did I see for my dermatology appointment last month?,gemini-3.1-pro,1,5,5,4,5,5,4,0,NA,0,0
+Q008,Easy,Am I still taking Metformin?,Qwen 2.5: 1.5B,1,5,5,5,5,5,4,0,NA,0,0
+Q008,Easy,Am I still taking Metformin?,Qwen 2.5: 3B,1,5,5,5,5,5,5,0,NA,0,0
+Q008,Easy,Am I still taking Metformin?,Llama 3.2 3B,3,5,5,5,5,5,4,0,NA,0,0
+Q008,Easy,Am I still taking Metformin?,gemini-3.1-pro,1,5,5,5,5,5,4,0,NA,0,0
+Q009,Easy,Is my Vitamin D level normal now?,Qwen 2.5: 1.5B,1,5,5,5,5,5,4,0,NA,0,0
+Q009,Easy,Is my Vitamin D level normal now?,Qwen 2.5: 3B,1,5,4,5,5,5,5,0,NA,0,0
+Q009,Easy,Is my Vitamin D level normal now?,Llama 3.2 3B,1,5,4,5,5,5,4,0,NA,0,0
+Q009,Easy,Is my Vitamin D level normal now?,gemini-3.1-pro,3,5,5,4,5,5,4,0,NA,0,0
+Q010,Easy,What was my blood pressure this morning?,Qwen 2.5: 1.5B,1,5,5,4,5,4,4,0,NA,0,0
+Q010,Easy,What was my blood pressure this morning?,Qwen 2.5: 3B,4,5,5,5,5,5,4,0,NA,0,0
+Q010,Easy,What was my blood pressure this morning?,Llama 3.2 3B,2,5,4,5,5,5,4,0,NA,0,0
+Q010,Easy,What was my blood pressure this morning?,gemini-3.1-pro,1,5,5,4,5,4,4,0,NA,0,0
+Q011,Medium,Has my cholesterol gone down since my last test?,Qwen 2.5: 1.5B,1,5,5,5,5,5,4,1,5,0,0
+Q011,Medium,Has my cholesterol gone down since my last test?,Qwen 2.5: 3B,1,2,5,4,4,4,3,1,5,0,0
+Q011,Medium,Has my cholesterol gone down since my last test?,Llama 3.2 3B,1,5,5,5,5,5,5,0,NA,0,0
+Q011,Medium,Has my cholesterol gone down since my last test?,gemini-3.1-pro,1,5,5,4,5,5,4,1,5,0,0
+Q012,Medium,Which of my current medications are for my heart failure?,Qwen 2.5: 1.5B,1,2,5,3,5,4,3,0,NA,0,0
+Q012,Medium,Which of my current medications are for my heart failure?,Qwen 2.5: 3B,1,5,5,5,5,5,5,0,NA,0,0
+Q012,Medium,Which of my current medications are for my heart failure?,Llama 3.2 3B,3,5,5,5,5,5,4,0,NA,0,0
+Q012,Medium,Which of my current medications are for my heart failure?,gemini-3.1-pro,1,5,5,5,5,4,4,0,NA,0,0
+Q013,Medium,What were the biopsy results from my endoscopy last week?,Qwen 2.5: 1.5B,1,5,5,5,5,4,5,0,NA,0,0
+Q013,Medium,What were the biopsy results from my endoscopy last week?,Qwen 2.5: 3B,1,5,5,5,5,4,4,0,NA,0,0
+Q013,Medium,What were the biopsy results from my endoscopy last week?,Llama 3.2 3B,3,5,4,4,5,4,4,0,NA,0,0
+Q013,Medium,What were the biopsy results from my endoscopy last week?,gemini-3.1-pro,3,5,5,4,5,3,4,0,NA,0,0
+Q014,Medium,Did my blood pressure spike at the clinic compared to my home readings?,Qwen 2.5: 1.5B,1,5,4,5,5,5,5,1,5,0,0
+Q014,Medium,Did my blood pressure spike at the clinic compared to my home readings?,Qwen 2.5: 3B,1,4,4,5,5,5,4,1,5,0,0
+Q014,Medium,Did my blood pressure spike at the clinic compared to my home readings?,Llama 3.2 3B,1,5,5,5,5,5,4,1,5,0,0
+Q014,Medium,Did my blood pressure spike at the clinic compared to my home readings?,gemini-3.1-pro,3,5,5,5,5,5,4,1,5,0,0
+Q015,Medium,I was prescribed a new antibiotic today. Is it safe with my sulfa allergy?,Qwen 2.5: 1.5B,1,1,2,2,3,2,2,1,1,0,0
+Q015,Medium,I was prescribed a new antibiotic today. Is it safe with my sulfa allergy?,Qwen 2.5: 3B,1,5,5,5,5,5,4,1,5,0,0
+Q015,Medium,I was prescribed a new antibiotic today. Is it safe with my sulfa allergy?,Llama 3.2 3B,1,5,3,3,5,4,4,1,3,0,0
+Q015,Medium,I was prescribed a new antibiotic today. Is it safe with my sulfa allergy?,gemini-3.1-pro,1,5,5,5,5,5,4,1,5,0,0
+Q016,Medium,"I went to the ER for chest pain on New Year's Eve, but I don't see the discharge summary. What does the record show for that date?",Qwen 2.5: 1.5B,1,2,5,5,5,5,5,0,NA,0,0
+Q016,Medium,"I went to the ER for chest pain on New Year's Eve, but I don't see the discharge summary. What does the record show for that date?",Qwen 2.5: 3B,1,5,5,5,5,5,4,0,NA,0,0
+Q016,Medium,"I went to the ER for chest pain on New Year's Eve, but I don't see the discharge summary. What does the record show for that date?",Llama 3.2 3B,1,5,5,5,5,5,5,0,NA,0,0
+Q016,Medium,"I went to the ER for chest pain on New Year's Eve, but I don't see the discharge summary. What does the record show for that date?",gemini-3.1-pro,1,5,5,4,5,5,4,0,NA,0,0
+Q017,Medium,Did I lose weight after my thyroid levels stabilized?,Qwen 2.5: 1.5B,1,2,4,2,3,3,1,1,2,0,0
+Q017,Medium,Did I lose weight after my thyroid levels stabilized?,Qwen 2.5: 3B,1,5,5,4,5,5,4,1,5,0,0
+Q017,Medium,Did I lose weight after my thyroid levels stabilized?,Llama 3.2 3B,1,3,3,4,5,5,5,1,3,0,0
+Q017,Medium,Did I lose weight after my thyroid levels stabilized?,gemini-3.1-pro,3,5,5,5,5,5,4,1,5,0,0
+Q018,Medium,How long after my knee pain started did I finally get an MRI?,Qwen 2.5: 1.5B,3,2,5,5,5,5,5,1,1,0,0
+Q018,Medium,How long after my knee pain started did I finally get an MRI?,Qwen 2.5: 3B,1,2,5,4,5,5,4,1,2,0,0
+Q018,Medium,How long after my knee pain started did I finally get an MRI?,Llama 3.2 3B,1,5,5,5,5,5,4,1,5,0,0
+Q018,Medium,How long after my knee pain started did I finally get an MRI?,gemini-3.1-pro,3,5,5,4,5,5,4,1,5,0,0
+Q019,Medium,Did Dr. Smith increase my Gabapentin dose at my last neurology visit?,Qwen 2.5: 1.5B,1,5,5,5,5,5,5,0,NA,0,0
+Q019,Medium,Did Dr. Smith increase my Gabapentin dose at my last neurology visit?,Qwen 2.5: 3B,1,5,5,5,5,5,5,0,NA,0,0
+Q019,Medium,Did Dr. Smith increase my Gabapentin dose at my last neurology visit?,Llama 3.2 3B,1,5,5,4,5,5,4,0,NA,0,0
+Q019,Medium,Did Dr. Smith increase my Gabapentin dose at my last neurology visit?,gemini-3.1-pro,3,5,5,4,5,4,4,0,NA,0,0
+Q020,Medium,Are my liver function tests from yesterday in the system yet?,Qwen 2.5: 1.5B,1,4,4,3,4,4,4,0,NA,0,0
+Q020,Medium,Are my liver function tests from yesterday in the system yet?,Qwen 2.5: 3B,1,4,5,4,5,5,4,0,NA,0,0
+Q020,Medium,Are my liver function tests from yesterday in the system yet?,Llama 3.2 3B,1,4,4,3,5,4,3,1,4,0,0
+Q020,Medium,Are my liver function tests from yesterday in the system yet?,gemini-3.1-pro,1,5,5,5,5,4,4,0,NA,0,0
+Q021,Hard,"I'm trying to figure out why I was feeling so fatigued last summer. Does my chart show any abnormal labs, medication changes, or new diagnoses around July or August?",Qwen 2.5: 1.5B,1,3,4,4,4,4,4,1,4,0,0
+Q021,Hard,"I'm trying to figure out why I was feeling so fatigued last summer. Does my chart show any abnormal labs, medication changes, or new diagnoses around July or August?",Qwen 2.5: 3B,1,5,5,5,5,5,4,1,5,0,0
+Q021,Hard,"I'm trying to figure out why I was feeling so fatigued last summer. Does my chart show any abnormal labs, medication changes, or new diagnoses around July or August?",Llama 3.2 3B,1,5,4,4,5,4,4,1,4,0,0
+Q021,Hard,"I'm trying to figure out why I was feeling so fatigued last summer. Does my chart show any abnormal labs, medication changes, or new diagnoses around July or August?",gemini-3.1-pro,1,5,5,4,5,3,4,1,4,0,0
+Q022,Hard,"I had a bad rash last week, and I think it might be from a new supplement or medicine. What new things did I start taking in the last month, and do any of them have rash as a common side effect in my notes?",Qwen 2.5: 1.5B,1,1,1,1,1,1,1,1,1,0,0
+Q022,Hard,"I had a bad rash last week, and I think it might be from a new supplement or medicine. What new things did I start taking in the last month, and do any of them have rash as a common side effect in my notes?",Qwen 2.5: 3B,1,5,3,4,5,5,3,1,4,0,0
+Q022,Hard,"I had a bad rash last week, and I think it might be from a new supplement or medicine. What new things did I start taking in the last month, and do any of them have rash as a common side effect in my notes?",Llama 3.2 3B,1,3,4,5,5,4,5,1,4,0,0
+Q022,Hard,"I had a bad rash last week, and I think it might be from a new supplement or medicine. What new things did I start taking in the last month, and do any of them have rash as a common side effect in my notes?",gemini-3.1-pro,3,5,5,4,5,4,4,1,4,0,0
+Q023,Hard,"Look at my kidney function (GFR) over the past three years. Is it declining steadily, or was there a sudden drop, and did the doctor mention it in their notes?",Qwen 2.5: 1.5B,1,2,4,4,4,3,3,1,3,0,0
+Q023,Hard,"Look at my kidney function (GFR) over the past three years. Is it declining steadily, or was there a sudden drop, and did the doctor mention it in their notes?",Qwen 2.5: 3B,1,5,5,5,5,5,4,1,5,0,0
+Q023,Hard,"Look at my kidney function (GFR) over the past three years. Is it declining steadily, or was there a sudden drop, and did the doctor mention it in their notes?",Llama 3.2 3B,1,5,3,4,5,4,4,1,3,0,0
+Q023,Hard,"Look at my kidney function (GFR) over the past three years. Is it declining steadily, or was there a sudden drop, and did the doctor mention it in their notes?",gemini-3.1-pro,3,5,5,5,5,5,4,1,5,0,0
+Q024,Hard,"My cardiologist told me to hold my blood thinner before my dental surgery, but I can't remember the exact instructions. What date is the surgery, which med do I hold, and when do I restart it?",Qwen 2.5: 1.5B,1,2,3,2,2,3,1,1,3,0,0
+Q024,Hard,"My cardiologist told me to hold my blood thinner before my dental surgery, but I can't remember the exact instructions. What date is the surgery, which med do I hold, and when do I restart it?",Qwen 2.5: 3B,1,5,5,5,5,4,4,0,NA,0,0
+Q024,Hard,"My cardiologist told me to hold my blood thinner before my dental surgery, but I can't remember the exact instructions. What date is the surgery, which med do I hold, and when do I restart it?",Llama 3.2 3B,1,5,5,5,5,5,4,0,NA,0,0
+Q024,Hard,"My cardiologist told me to hold my blood thinner before my dental surgery, but I can't remember the exact instructions. What date is the surgery, which med do I hold, and when do I restart it?",gemini-3.1-pro,3,5,5,5,5,5,4,0,NA,0,0
+Q025,Hard,"I read that my recent chest x-ray had a 'nodule'. What exactly did the radiologist say about it, and is there a follow-up CT scan scheduled?",Qwen 2.5: 1.5B,1,5,3,4,5,4,5,1,4,0,0
+Q025,Hard,"I read that my recent chest x-ray had a 'nodule'. What exactly did the radiologist say about it, and is there a follow-up CT scan scheduled?",Qwen 2.5: 3B,1,2,3,4,5,4,4,0,NA,0,0
+Q025,Hard,"I read that my recent chest x-ray had a 'nodule'. What exactly did the radiologist say about it, and is there a follow-up CT scan scheduled?",Llama 3.2 3B,1,3,3,4,5,4,5,0,NA,0,0
+Q025,Hard,"I read that my recent chest x-ray had a 'nodule'. What exactly did the radiologist say about it, and is there a follow-up CT scan scheduled?",gemini-3.1-pro,4,5,5,5,5,4,4,1,5,0,0
+Q026,Hard,"I am seeing a new physical therapist and they asked if my chronic back pain is responding to the new injection therapies. What injections have I had in the last 6 months, and did I report any pain relief in subsequent visits?",Qwen 2.5: 1.5B,1,3,5,5,5,4,4,1,4,0,0
+Q026,Hard,"I am seeing a new physical therapist and they asked if my chronic back pain is responding to the new injection therapies. What injections have I had in the last 6 months, and did I report any pain relief in subsequent visits?",Qwen 2.5: 3B,1,5,5,5,5,4,4,1,5,0,0
+Q026,Hard,"I am seeing a new physical therapist and they asked if my chronic back pain is responding to the new injection therapies. What injections have I had in the last 6 months, and did I report any pain relief in subsequent visits?",Llama 3.2 3B,1,5,5,5,5,4,4,0,NA,0,0
+Q026,Hard,"I am seeing a new physical therapist and they asked if my chronic back pain is responding to the new injection therapies. What injections have I had in the last 6 months, and did I report any pain relief in subsequent visits?",gemini-3.1-pro,3,5,5,4,5,4,4,1,4,0,0
+Q027,Hard,"I need to send my vaccination records to my new employer. Do I have proof of my Hepatitis B series, a recent Tdap, and this year's flu shot in the app?",Qwen 2.5: 1.5B,1,5,5,5,5,5,4,1,5,0,0
+Q027,Hard,"I need to send my vaccination records to my new employer. Do I have proof of my Hepatitis B series, a recent Tdap, and this year's flu shot in the app?",Qwen 2.5: 3B,1,4,5,4,4,3,2,1,4,0,0
+Q027,Hard,"I need to send my vaccination records to my new employer. Do I have proof of my Hepatitis B series, a recent Tdap, and this year's flu shot in the app?",Llama 3.2 3B,1,3,3,3,5,5,5,1,4,0,0
+Q027,Hard,"I need to send my vaccination records to my new employer. Do I have proof of my Hepatitis B series, a recent Tdap, and this year's flu shot in the app?",gemini-3.1-pro,1,5,5,5,5,5,4,1,5,0,0
+Q028,Hard,"My sleep apnea has been getting worse. Have I gained a significant amount of weight since my CPAP was originally titrated in 2020, and has my daytime oxygen saturation changed?",Qwen 2.5: 1.5B,1,2,5,4,5,5,4,1,3,0,0
+Q028,Hard,"My sleep apnea has been getting worse. Have I gained a significant amount of weight since my CPAP was originally titrated in 2020, and has my daytime oxygen saturation changed?",Qwen 2.5: 3B,1,3,3,3,4,3,3,1,3,0,0
+Q028,Hard,"My sleep apnea has been getting worse. Have I gained a significant amount of weight since my CPAP was originally titrated in 2020, and has my daytime oxygen saturation changed?",Llama 3.2 3B,1,5,4,5,5,5,4,1,4,0,0
+Q028,Hard,"My sleep apnea has been getting worse. Have I gained a significant amount of weight since my CPAP was originally titrated in 2020, and has my daytime oxygen saturation changed?",gemini-3.1-pro,3,5,4,5,5,5,4,1,4,0,0
+Q029,Hard,"The ER doctor said I had a concussion and should follow up if I have worsening headaches. I've had a headache for 3 days now. Is there a neurologist referral in my chart, and what are my current pain medications?",Qwen 2.5: 1.5B,1,3,4,4,4,4,3,1,4,0,0
+Q029,Hard,"The ER doctor said I had a concussion and should follow up if I have worsening headaches. I've had a headache for 3 days now. Is there a neurologist referral in my chart, and what are my current pain medications?",Qwen 2.5: 3B,1,5,4,5,5,5,5,1,5,0,0
+Q029,Hard,"The ER doctor said I had a concussion and should follow up if I have worsening headaches. I've had a headache for 3 days now. Is there a neurologist referral in my chart, and what are my current pain medications?",Llama 3.2 3B,1,5,4,4,5,5,4,1,4,0,0
+Q029,Hard,"The ER doctor said I had a concussion and should follow up if I have worsening headaches. I've had a headache for 3 days now. Is there a neurologist referral in my chart, and what are my current pain medications?",gemini-3.1-pro,4,5,5,5,5,5,4,1,5,0,0
+Q030,Hard,"I'm trying to control my diabetes better. Based on my last three A1c readings and my daily fasting blood sugars this month, is my current Lantus insulin dose of 20 units actually working?",Qwen 2.5: 1.5B,1,3,2,3,4,4,4,1,3,0,0
+Q030,Hard,"I'm trying to control my diabetes better. Based on my last three A1c readings and my daily fasting blood sugars this month, is my current Lantus insulin dose of 20 units actually working?",Qwen 2.5: 3B,1,3,4,4,4,4,4,1,4,0,0
+Q030,Hard,"I'm trying to control my diabetes better. Based on my last three A1c readings and my daily fasting blood sugars this month, is my current Lantus insulin dose of 20 units actually working?",Llama 3.2 3B,1,3,2,3,4,4,4,1,3,0,0
+Q030,Hard,"I'm trying to control my diabetes better. Based on my last three A1c readings and my daily fasting blood sugars this month, is my current Lantus insulin dose of 20 units actually working?",gemini-3.1-pro,1,4,4,4,5,4,3,1,3,0,0
