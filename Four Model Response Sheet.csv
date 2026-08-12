@@ -1,0 +1,578 @@
+ID,HealthGPT System Prompt,Chart Context (JSON),Question Difficulty,User Question,Qwen 2.5: 1.5B,Qwen 2.5: 3B,Llama 3.2 3B,gemini-3.1-pro,PDSQI Score
+Q001,"You are HealthGPT, a careful, factual health assistant.
+        Rules:
+        - Ground every claim in the records and health data shown below. Do not invent values, dates, diagnoses, or medications.
+        - When you cite numbers, dates, units, or medication names, quote them verbatim from the records.
+        - If the records contain partial information for the question, answer with what is there and briefly note what is missing.
+        - If the records contain nothing relevant, say so plainly in your own words and offer to help with what is available.
+        - Do not give a diagnosis or prescription. For serious concerns, suggest seeing a doctor.
+        - Be concise. Prefer short, structured answers (lists, key-value lines) over prose.","{""medications"": [{""name"": ""Lisinopril"", ""dose"": ""10 mg"", ""frequency"": ""daily"", ""indication"": ""hypertension""}]}",Easy,What is the dose of my blood pressure medication?,"The dose of your blood pressure medication, Lisinopril, is 10 mg daily.","The dose of your blood pressure medication, Lisinopril, is 10 mg taken daily.",The dose of your blood pressure medication (Lisinopril) is 10 mg.,"Based on your medical records, the dose for your blood pressure medication is:
+ 
+
+ * **Medication:** ""Lisinopril""
+ * **Indication:** ""hypertension""
+ * **Dose:** ""10 mg""
+ * **Frequency:** ""daily""",
+Q002,,"{""allergies"": [{""allergen"": ""Penicillin"", ""reaction"": ""Hives"", ""severity"": ""Moderate"", ""date_recorded"": ""2015-08-22""}]}",Easy,Do I have a documented allergy to penicillin?,"Yes, you do have a documented allergy to penicillin. The allergic reaction is described as hives (urticaria), which has moderate severity. This information was recorded on August 22, 2015.","You have a documented allergy to Penicillin, which is recorded with a reaction of Hives and severity as Moderate, dated August 22, 2015.","Yes, you have a documented allergy to penicillin. The record shows that you experienced hives (a reaction) after exposure to penicillin on August 22, 2015, and the severity of the reaction is listed as moderate.","Yes, your records show a documented allergy to penicillin. 
+ 
+
+ **Allergy Details:**
+ * **Allergen:** ""Penicillin""
+ * **Reaction:** ""Hives""
+ * **Severity:** ""Moderate""
+ * **Date Recorded:** ""2015-08-22""",
+Q003,,"{""labs"": [{""test"": ""Hemoglobin A1c"", ""value"": ""6.2"", ""unit"": ""%"", ""date"": ""2023-10-15"", ""reference_range"": ""<5.7""}]}",Easy,What was my last A1c result?,"Your last A1c result was 6.2%, as shown in the chart for October 15, 2023. This result is within the normal reference range of <5.7%.","Your last Hemoglobin A1c result was 6.2% on October 15, 2023, and it fell within the reference range of <5.7%.","According to the chart, your most recent Hemoglobin A1c test result was 6.2% on October 15, 2023.","Based on your medical records, here is your most recent Hemoglobin A1c result:
+ 
+
+ * **Date:** 2023-10-15
+ * **Result:** 6.2 %
+ * **Reference Range:** <5.7",
+Q004,,"{""diagnoses"": [{""condition"": ""Asthma, unspecified"", ""date_of_diagnosis"": ""2018-04-12"", ""status"": ""Active"", ""provider"": ""Dr. Emily Chen""}]}",Easy,When was I diagnosed with asthma?,"You were diagnosed with asthma on April 12, 2018.",You were diagnosed with Asthma on 2018-04-12.,"You were diagnosed with asthma on April 12, 2018.","Based on your medical records, you were diagnosed with asthma on **""2018-04-12""**. 
+ 
+
+ Here are the details from your file:
+ * **Condition:** ""Asthma, unspecified""
+ * **Date of Diagnosis:** ""2018-04-12""
+ * **Status:** ""Active""
+ * **Provider:** ""Dr. Emily Chen""",
+Q005,,"{""vitals"": [{""date"": ""2023-11-02"", ""weight"": ""165 lbs"", ""height"": ""68 inches"", ""bmi"": ""25.1""}]}",Easy,What was my weight at my last doctor's visit?,"At your last doctor's visit on 2023-11-02, you weighed 165 lbs.","At your last doctor's visit on 2023-11-02, your weight was recorded as 165 lbs.",Your weight at your last doctor's visit was 165 pounds.,"Based on your medical records, your weight was:
+ 
+
+ * **Date:** ""2023-11-02""
+ * **Weight:** ""165 lbs""",
+Q006,,"{""procedures"": [{""name"": ""Screening Colonoscopy"", ""date"": ""2021-08-20"", ""provider"": ""Dr. Albert Wong"", ""result"": ""Normal, no polyps found""}]}",Easy,Did I have a colonoscopy in 2021?,"Yes, you had a screening colonoscopy on August 20, 2021.","Yes, you had a colonoscopy in 2021 as indicated by the record of a Screening Colonoscopy performed on August 20, 2021, conducted by Dr. Albert Wong, which resulted in normal findings without any polyps detected.","Yes, according to the records, you had a Screening Colonoscopy on August 20, 2021.","Yes, according to your medical records, you had a colonoscopy in 2021. 
+ 
+
+ Here are the details:
+ * **Procedure:** ""Screening Colonoscopy""
+ * **Date:** ""2021-08-20""
+ * **Provider:** ""Dr. Albert Wong""
+ * **Result:** ""Normal, no polyps found""",
+Q007,,"{""encounters"": [{""date"": ""2023-12-10"", ""provider"": ""Dr. Sarah Jenkins"", ""specialty"": ""Dermatology"", ""reason"": ""Annual mole check""}]}",Easy,Who did I see for my dermatology appointment last month?,"You saw Dr. Sarah Jenkins for your dermatology appointment on December 10, 2023.",You saw Dr. Sarah Jenkins for your dermatology appointment last month. The appointment was conducted on 2023-12-10 to perform an annual mole check.,"According to the chart, you saw Dr. Sarah Jenkins for your dermatology appointment on December 10, 2023.","Based on your medical records, you saw:
+ 
+
+ * **Provider:** Dr. Sarah Jenkins
+ * **Date:** 2023-12-10
+ * **Specialty:** Dermatology
+ * **Reason:** Annual mole check",
+Q008,,"{""medications"": [{""name"": ""Metformin"", ""status"": ""Active"", ""dose"": ""500mg BID""}, {""name"": ""Atorvastatin"", ""status"": ""Discontinued"", ""dose"": ""20mg daily""}]}",Easy,Am I still taking Metformin?,"Yes, you are still taking Metformin. The medication status is listed as ""Active"" and the dose is specified as 500 mg BID (twice a day).","Yes, you are still taking Metformin with a dose of 500mg twice a day (BID).","Yes, you are still taking Metformin. According to the records, it is currently listed as ""Active"" with a dose of 500mg BID (twice daily).","Yes. According to your records, your prescription is current:
+ 
+
+ * **Medication:** ""Metformin""
+ * **Status:** ""Active"" 
+ * **Dose:** ""500mg BID""",
+Q009,,"{""labs"": [{""test"": ""Vitamin D, 25-Hydroxy"", ""value"": ""35"", ""unit"": ""ng/mL"", ""reference_range"": ""30-100"", ""flag"": ""Normal"", ""date"": ""2024-01-05""}]}",Easy,Is my Vitamin D level normal now?,"Yes, your Vitamin D level is within the normal range. The value of 35 ng/mL falls within the reference range of 30-100 ng/mL.",Your Vitamin D level is within the reference range of 30-100 ng/mL and has been flagged as Normal.,"According to the records, your 25-Hydroxy Vitamin D level is currently within the normal range (30-100 ng/mL). The flag indicates that it's ""Normal"".","Yes, according to your records, your Vitamin D level is normal. 
+ 
+
+ Here are the details from your most recent test:
+ * **Test:** Vitamin D, 25-Hydroxy
+ * **Date:** 2024-01-05
+ * **Value:** 35 ng/mL
+ * **Reference Range:** 30-100
+ * **Flag:** Normal",
+Q010,,"{""vitals"": [{""date"": ""2024-01-15T08:30:00"", ""systolic"": 118, ""diastolic"": 76, ""context"": ""Home reading synced via Apple Health""}]}",Easy,What was my blood pressure this morning?,The systolic blood pressure on the 2024-01-15T08:30:00 was 118 mmHg and the diastolic blood pressure was 76 mmHg. This reading was taken at home via Apple Health charting service.,Your systolic blood pressure was 118 and your diastolic blood pressure was 76 this morning. These readings were recorded when you synced your home vitals to Apple Health on 2024-01-15 at 08:30.,"According to the chart, your systolic blood pressure this morning was 118 mmHg and diastolic blood pressure was 76 mmHg.","Based on your records, here is your available blood pressure reading:
+ 
+
+ * **Date/Time:** 2024-01-15T08:30:00
+ * **Systolic:** 118
+ * **Diastolic:** 76
+ * **Context:** Home reading synced via Apple Health
+ 
+
+ *(Note: The records do not specify today's date, so I cannot confirm if 2024-01-15 was ""this morning"", but this is the only reading available in your file.)*",
+Q011,"You are HealthGPT, a careful, factual health assistant.
+        Rules:
+        - Ground every claim in the records and health data shown below. Do not invent values, dates, diagnoses, or medications.
+        - When you cite numbers, dates, units, or medication names, quote them verbatim from the records.
+        - If the records contain partial information for the question, answer with what is there and briefly note what is missing.
+        - If the records contain nothing relevant, say so plainly in your own words and offer to help with what is available.
+        - Do not give a diagnosis or prescription. For serious concerns, suggest seeing a doctor.
+        - Be concise. Prefer short, structured answers (lists, key-value lines) over prose.","{""labs"": [{""test"": ""Total Cholesterol"", ""value"": 210, ""date"": ""2022-05-10""}, {""test"": ""Total Cholesterol"", ""value"": 185, ""date"": ""2023-11-20""}]}",Medium,Has my cholesterol gone down since my last test?,"Yes, your cholesterol has decreased. The value from the 2023-11-20 test is lower than that of the previous test on 2022-05-10: 185 mg/dL compared to 210 mg/dL.","Your Total Cholesterol level has decreased from the most recent measurement on 2023-11-20 (value of 185) to the previous measurement on 2022-05-10 (value of 210). Therefore, your cholesterol has gone down since your last test.","According to the available data, yes, your total cholesterol level has decreased from 210 on May 10, 2022, to 185 on November 20, 2023.","Yes, your Total Cholesterol has decreased between the dates provided in your records. 
+ 
+
+ * **2022-05-10:** 210
+ * **2023-11-20:** 185
+ 
+
+ *Note: The provided records do not specify the units of measurement for these values.*",
+Q012,,"{""medications"": [{""name"": ""Carvedilol"", ""indication"": ""Heart Failure""}, {""name"": ""Furosemide"", ""indication"": ""Edema/Heart Failure""}, {""name"": ""Omeprazole"", ""indication"": ""GERD""}], ""diagnoses"": [{""condition"": ""Heart Failure with reduced Ejection Fraction""}]}",Medium,Which of my current medications are for my heart failure?,"Based on the information provided, two medications are indicated specifically for your condition of Heart Failure with Reduced Ejection Fraction.
+ 
+
+ 1. **Carvedilol** - This medication is used to treat and prevent the progression of heart failure due to its beneficial effects on cardiac contractility and angina.
+ 2. **Furosemide** - Furosemide, also known as Hydrochlorothiazide, is indicated for treating edema and other manifestations of heart failure by reducing fluid retention.
+ 
+
+ While Omeprazole is used to treat Gastroesophageal Reflux Disease (GERD), it does not specifically address your condition.",Your current medications for your heart failure are Carvedilol and Furosemide.,"According to the chart, your current medications for Heart Failure are:
+ 
+
+ 1. Carvedilol
+ 2. Furosemide","Based on your records, the following medications are indicated for your heart failure:
+ 
+
+ * **""Carvedilol""** (Indication: ""Heart Failure"")
+ * **""Furosemide""** (Indication: ""Edema/Heart Failure"")",
+Q013,,"{""procedures"": [{""name"": ""Esophagogastroduodenoscopy (EGD)"", ""date"": ""2024-01-08"", ""specimen_taken"": true}], ""labs"": [{""test"": ""Surgical Pathology, Gastric biopsy"", ""date"": ""2024-01-10"", ""result"": ""Negative for H. pylori. Mild chronic inactive gastritis.""}]}",Medium,What were the biopsy results from my endoscopy last week?,The result of your gastric biopsy was Negative for Helicobacter pylori and mild chronic inactive gastritis.,"The biopsy results from your esophagogastroduodenoscopy (EGD) on 2024-01-08 are as follows: 
+ 
+
+ - Negative for H. pylori.
+ - Mild chronic inactive gastritis.
+ 
+
+ These results were part of a gastric biopsy performed during the endoscopy.","According to the records, the biopsy results from your endoscopy on 2024-01-08 were:
+ 
+
+ ""Negative for H. pylori. Mild chronic inactive gastritis.""
+ 
+
+ Note that a specimen was taken during the procedure, which supports this result.","Based on your medical records, here are the results from your ""Esophagogastroduodenoscopy (EGD)"" performed on ""2024-01-08"":
+ 
+
+ * **Test:** ""Surgical Pathology, Gastric biopsy"" (dated ""2024-01-10"")
+ * **Result:** ""Negative for H. pylori. Mild chronic inactive gastritis.""
+ 
+
+ Please follow up with your doctor to discuss these results and what they mean for your care.",
+Q014,,"{""vitals"": [{""date"": ""2023-12-01"", ""systolic"": 122, ""diastolic"": 80, ""location"": ""Home""}, {""date"": ""2023-12-05"", ""systolic"": 145, ""diastolic"": 90, ""location"": ""Clinic""}, {""date"": ""2023-12-10"", ""systolic"": 118, ""diastolic"": 78, ""location"": ""Home""}]}",Medium,Did my blood pressure spike at the clinic compared to my home readings?,"Yes, your blood pressure increased from a reading of 122/80 mmHg at home on December 1st to 145/90 mmHg at the clinic on December 5th.","Yes, your systolic blood pressure (from 145 mmHg) was higher at the clinic on December 5, 2023, compared to your home reading of 122 mmHg from December 1, 2023. Your diastolic pressures were also slightly higher at the clinic (90 mmHg vs. 80 mmHg at home).","Based on the chart, your systolic blood pressure was higher at the clinic on December 5 (145 mmHg) than at home on both December 1 (122 mmHg) and December 10 (118 mmHg). Your diastolic blood pressure was also higher at the clinic on December 5 (90 mmHg) compared to your home readings.","Yes, your blood pressure was higher during your clinic visit compared to your home readings. 
+ 
+
+ Here is the breakdown from your records:
+ 
+
+ **Home Readings:**
+ * ""2023-12-01"": 122 systolic, 80 diastolic
+ * ""2023-12-10"": 118 systolic, 78 diastolic
+ 
+
+ **Clinic Reading:**
+ * ""2023-12-05"": 145 systolic, 90 diastolic
+ 
+
+ If you have concerns about these variations in your blood pressure, please consult your doctor.",
+Q015,,"{""allergies"": [{""allergen"": ""Sulfonamides"", ""reaction"": ""Anaphylaxis""}], ""medications"": [{""name"": ""Amoxicillin"", ""date_prescribed"": ""2024-01-18"", ""class"": ""Penicillin antibiotic"", ""status"": ""Active""}]}",Medium,I was prescribed a new antibiotic today. Is it safe with my sulfa allergy?,"Yes, the Amoxicillin you were prescribed is active against sulfonamides. While it contains sulfonamide as an ingredient, it does not trigger your known allergic reaction of anaphylaxis to sulfonamides. However, this medication still requires careful monitoring and adherence to a low-sulfur diet or avoidance of any sources that might contain sulfonamide compounds. It's important to discuss the potential risks with your healthcare provider before starting treatment.","Based on the information provided, you have an allergy to Sulfonamides that can cause Anaphylaxis. The antibiotic Amoxicillin is a Penicillin antibiotic and not classified as a sulfonamide. Therefore, it should be compatible with your current allergy, but please consult with your healthcare provider for specific guidance based on your full medical history.","According to the chart, you have an allergy to Sulfonamides and experience Anaphylaxis as a reaction. You are currently taking Amoxicillin, which is classified as a Penicillin antibiotic.","Based on your medical records:
+ 
+
+ *  **Allergy on file:** ""Sulfonamides"" (Reaction: ""Anaphylaxis"")
+ *  **Active Prescription:** ""Amoxicillin"" prescribed on ""2024-01-18"" (Status: ""Active"")
+ *  **Medication Class:** ""Penicillin antibiotic""
+ 
+
+ **Analysis:**
+ The records show that your newly prescribed medication, ""Amoxicillin"", is a ""Penicillin antibiotic"". This is a different medication class from ""Sulfonamides"". 
+ 
+
+ **Missing Information & Recommendation:**
+ Your records do not contain a specific medical safety evaluation for this prescription. Because your allergy to ""Sulfonamides"" results in ""Anaphylaxis"" (a severe and serious reaction), please consult your doctor or pharmacist to confirm that ""Amoxicillin"" is completely safe for you before taking it.",
+Q016,,"{""encounters"": [{""date"": ""2023-12-31"", ""type"": ""Emergency Room"", ""chief_complaint"": ""Chest pain"", ""status"": ""Discharged"", ""discharge_summary"": ""Pending/Not yet uploaded""}], ""vitals"": [{""date"": ""2023-12-31"", ""heart_rate"": 95, ""blood_pressure"": ""130/85""}]}",Medium,"I went to the ER for chest pain on New Year's Eve, but I don't see the discharge summary. What does the record show for that date?","The record shows the following information for January 1, 2023 (New Year's Eve):
+ 
+
+ - Chief complaint: Chest pain
+ - Heart rate: 95 bpm
+ - Blood pressure: 130/85
+ 
+
+ The discharge summary is pending or not yet uploaded.","The chart shows a record from an Emergency Room visit on 2023-12-31 with the chief complaint of chest pain. The vitals were recorded as a heart rate of 95 and blood pressure at 130/85. However, the discharge summary is pending and has not been uploaded yet.","The record shows that you visited the Emergency Room on December 31st with a chief complaint of chest pain. The status is noted as ""Discharged"", but the discharge summary is listed as ""Pending/Not yet uploaded"". The vitals for that day include a heart rate of 95 and blood pressure of 130/85.","Here is what your record shows for **""2023-12-31""**:
+ 
+
+ **Encounter Details:**
+ * **Type:** ""Emergency Room""
+ * **Chief complaint:** ""Chest pain""
+ * **Status:** ""Discharged""
+ 
+
+ **Vitals:**
+ * **Heart rate:** 95
+ * **Blood pressure:** ""130/85""
+ 
+
+ **Missing Information:**
+ As you noted, the full details of your visit are not available because the **discharge summary** is currently marked as **""Pending/Not yet uploaded""**. 
+ 
+
+ *Note: Chest pain can be a serious concern. If you are continuing to experience chest pain or worsening symptoms, please see a doctor immediately.*",
+Q017,,"{""vitals"": [{""date"": ""2023-01-10"", ""weight"": ""190 lbs""}, {""date"": ""2023-08-15"", ""weight"": ""175 lbs""}], ""labs"": [{""test"": ""TSH"", ""date"": ""2023-01-10"", ""value"": 8.5, ""status"": ""High""}, {""test"": ""TSH"", ""date"": ""2023-08-10"", ""value"": 2.1, ""status"": ""Normal""}]}",Medium,Did I lose weight after my thyroid levels stabilized?,"Based on the information provided in the chart context, you did not lose weight after your thyroid levels stabilized.
+ 
+
+ The chart shows that your weight was 190 lbs on January 10th and then dropped to 175 lbs by August 15th. This indicates a slight decrease in weight over time without mentioning any stabilization or change in weight following the stabilizing of your thyroid levels.
+ 
+
+ Since the weights before and after the stabilization date are given (190 lbs and 175 lbs), we can infer that you did not lose weight as a result of stabilization in your thyroid levels. The values for TSH test (8.5 at initial measurement and 2.1 normal) also suggest that your condition related to thyroid was already improved, but the change in weight is unrelated to this improvement.","Yes, based on the provided records, your weight decreased from 190 lbs in January to 175 lbs by August, which occurred after your thyroid levels (TSH) returned to a normal range. Therefore, you lost weight during this period when your thyroid function was stable.","According to the chart, your weight was 190 lbs on January 10, 2023, and 175 lbs on August 15, 2023 (5 months later). This represents a weight loss of 15 lbs. However, there is no direct indication that your thyroid levels stabilized at any point during this period.","Based on your records, your weight was lower shortly after your thyroid (TSH) test returned to normal, but the exact timing of the weight loss is unclear. 
+ 
+
+ **Thyroid (TSH) Levels:**
+ *  ""2023-01-10"": 8.5 (""High"")
+ *  ""2023-08-10"": 2.1 (""Normal"")
+ 
+
+ **Weight:**
+ *  ""2023-01-10"": ""190 lbs""
+ *  ""2023-08-15"": ""175 lbs""
+ 
+
+ **Missing Information:** 
+ Your records show an overall weight decrease between January and August. However, because there are no intermediate weight measurements, the data does not specify whether the weight loss occurred gradually between January and August, or specifically *after* your levels stabilized on ""2023-08-10"".",
+Q018,,"{""diagnoses"": [{""condition"": ""Right knee pain"", ""date_of_onset"": ""2023-03-15""}], ""procedures"": [{""name"": ""MRI Right Knee"", ""date"": ""2023-06-20"", ""result"": ""Medial meniscus tear""}]}",Medium,How long after my knee pain started did I finally get an MRI?,You finally got an MRI 8 months (from 2023-03-15 to 2023-06-20) after your knee pain began.,"You got an MRI for your right knee on June 20, 2023. Your knee pain started on March 15, 2023. Therefore, you waited for approximately **8 months and 7 days** after your symptoms began to have the MRI.","According to the records, your knee pain started on March 15, 2023. You received the MRI on June 20, 2023. 
+ 
+
+ The time difference is approximately 3 months and 5 days.","Based on your medical records, you received your MRI 97 days (approximately 3 months) after your knee pain started. 
+ 
+
+ Here are the specific details from your records:
+ * **Condition:** ""Right knee pain""
+ * **Date of onset:** ""2023-03-15""
+ * **Procedure:** ""MRI Right Knee""
+ * **Date:** ""2023-06-20""",
+Q019,,"{""encounters"": [{""date"": ""2023-11-05"", ""provider"": ""Dr. Smith"", ""specialty"": ""Neurology""}], ""medications"": [{""name"": ""Gabapentin"", ""prior_dose"": ""300mg TID"", ""current_dose"": ""600mg TID"", ""date_changed"": ""2023-11-05""}]}",Medium,Did Dr. Smith increase my Gabapentin dose at my last neurology visit?,"Yes, Dr. Smith increased your Gabapentin dose on November 5th, 2023, from 300mg TID to 600mg TID.","Yes, Dr. Smith increased your Gabapentin dose from 300mg TID to 600mg TID during your most recent neurology visit on 2023-11-05.","Yes, according to the chart, Dr. Smith changed your Gabapentin dose from 300mg TID to 600mg TID on November 5, 2023. This suggests that the dose was increased.","Yes. According to your medical records, your dose was increased during that visit. 
+ 
+
+ Here are the details:
+ * **Provider:** ""Dr. Smith"" (""Neurology"")
+ * **Encounter Date:** ""2023-11-05""
+ * **Medication:** ""Gabapentin""
+ * **Prior dose:** ""300mg TID""
+ * **Current dose:** ""600mg TID""
+ * **Date changed:** ""2023-11-05""",
+Q020,,"{""labs"": [{""test"": ""ALT"", ""date"": ""2024-01-17"", ""status"": ""Pending""}, {""test"": ""AST"", ""date"": ""2024-01-17"", ""status"": ""Pending""}, {""test"": ""Complete Blood Count"", ""date"": ""2024-01-17"", ""status"": ""Final"", ""result"": ""Normal""}]}",Medium,Are my liver function tests from yesterday in the system yet?,"Yes, your liver function tests (ALT and AST) are pending as of today. The results for Complete Blood Count were final on 2024-01-17.","Your liver function tests (ALT and AST) are pending, so they have not been added to your current lab results as of 2024-01-17. Your complete blood count test was found to be within normal limits. Please check back later for updated results.","According to the chart, there is no information on whether your liver function tests are in (i.e., received or processed) as of today. The status for both ALT and AST is listed as ""Pending"", indicating they have not been finalized or entered into the system yet, but there is no indication that they have not arrived.","Your liver function tests from ""2024-01-17"" are in the system, but the results are not yet available. 
+ 
+
+ *  **""ALT""**: ""Pending""
+ *  **""AST""**: ""Pending""",
+Q021,"You are HealthGPT, a careful, factual health assistant.
+        Rules:
+        - Ground every claim in the records and health data shown below. Do not invent values, dates, diagnoses, or medications.
+        - When you cite numbers, dates, units, or medication names, quote them verbatim from the records.
+        - If the records contain partial information for the question, answer with what is there and briefly note what is missing.
+        - If the records contain nothing relevant, say so plainly in your own words and offer to help with what is available.
+        - Do not give a diagnosis or prescription. For serious concerns, suggest seeing a doctor.
+        - Be concise. Prefer short, structured answers (lists, key-value lines) over prose.","{""labs"": [{""test"": ""Hemoglobin"", ""date"": ""2023-07-15"", ""value"": 9.2, ""flag"": ""Low""}, {""test"": ""Ferritin"", ""date"": ""2023-07-15"", ""value"": 8, ""flag"": ""Low""}], ""medications"": [{""name"": ""Ferrous Sulfate"", ""start_date"": ""2023-07-20"", ""status"": ""Active""}], ""diagnoses"": [{""condition"": ""Iron deficiency anemia"", ""date_recorded"": ""2023-07-18""}], ""encounters"": [{""date"": ""2023-07-12"", ""symptoms"": [""Fatigue"", ""Shortness of breath""]}]}",Hard,"I'm trying to figure out why I was feeling so fatigued last summer. Does my chart show any abnormal labs, medication changes, or new diagnoses around July or August?","Your chart does not show any abnormal labs in the given time frame (July 15-20). However, it does indicate that you were diagnosed with iron deficiency anemia on July 18 and have been taking Ferrous Sulfate since July 20. Your hemoglobin level is low at 9.2 g/dL on July 15, which could contribute to your fatigue.
+ 
+
+ Your chart also shows that you experienced symptoms of fatigue from July 12 onwards.","Your chart shows the following relevant information:
+ 
+
+ - **Lab Results**: Hemoglobin and Ferritin levels were low on July 15, 2023.
+ - **Medication Changes**: Ferrous Sulfate was started on July 20, 2023.
+ - **Diagnosis**: Iron deficiency anemia was recorded on July 18, 2023.
+ 
+
+ These changes and diagnoses are likely related to your symptoms of fatigue and shortness of breath that you reported in the encounter dated July 12, 2023. These findings suggest a recent diagnosis of iron deficiency anemia, with measures taken (starting Ferrous Sulfate) to address it.","Based on the provided chart context, here are some relevant details:
+ 
+
+ 
+
+ * Lab results:
+  + Hemoglobin: 9.2 units (Low), dated 2023-07-15
+  + Ferritin: 8 units (Low), dated 2023-07-15
+ * Medication changes:
+  + Ferrous Sulfate, started on 2023-07-20
+ * New diagnoses:
+  + Iron deficiency anemia, recorded on 2023-07-18
+ 
+
+ 
+
+ These are the only lab results, medication changes, and new diagnoses found in the provided chart around July or August.","Based on your medical records, here is the information from July 2023 related to your symptoms. 
+ 
+
+ **Reported Symptoms**
+ *  **Date:** ""2023-07-12""
+ *  **Symptoms:** ""Fatigue"", ""Shortness of breath""
+ 
+
+ **Abnormal Labs**
+ *  **Test:** ""Hemoglobin"" | **Date:** ""2023-07-15"" | **Value:** 9.2 | **Flag:** ""Low""
+ *  **Test:** ""Ferritin"" | **Date:** ""2023-07-15"" | **Value:** 8 | **Flag:** ""Low""
+ 
+
+ **New Diagnoses**
+ *  **Condition:** ""Iron deficiency anemia""
+ *  **Date Recorded:** ""2023-07-18""
+ 
+
+ **Medication Changes**
+ *  **Name:** ""Ferrous Sulfate"" 
+ *  **Start Date:** ""2023-07-20""
+ *  **Status:** ""Active""
+ 
+
+ *Note: Your records contain data for July 2023, but there is no information available for August. As a reminder, I cannot diagnose or prescribe. If your symptoms persist or you have serious concerns, please consult a doctor.*",
+Q022,,"{""medications"": [{""name"": ""Allopurinol"", ""start_date"": ""2024-01-05"", ""note"": ""Patient counseled on risk of skin rash; told to discontinue immediately if rash develops.""}, {""name"": ""Vitamin B12"", ""start_date"": ""2023-12-28"", ""note"": ""Over the counter supplement""}], ""encounters"": [{""date"": ""2024-01-12"", ""reason"": ""Maculopapular rash on trunk"", ""assessment"": ""Suspected drug eruption secondary to Allopurinol""}]}",Hard,"I had a bad rash last week, and I think it might be from a new supplement or medicine. What new things did I start taking in the last month, and do any of them have rash as a common side effect in my notes?","Based on the chart context provided, you started taking Vitamin B12 over the counter on December 28, 2023. No medications or supplements mentioned are associated with rash according to your records. If you experienced a rash last week, it is likely unrelated to any new medication or supplement that was introduced in January 2024. The chart does not contain information about Vitamin B12 use prior to December 28, so we cannot confirm whether taking the supplement could be responsible for your rash based solely on this data.","You started taking Allopurinol on 2024-01-05, which has a note advising to discontinue immediately if you develop a skin rash. Additionally, you began taking Vitamin B12 over the counter starting from 2023-12-28. 
+ 
+
+ Regarding side effects in your notes, Allopurinol is mentioned with a risk of developing a skin rash.","Based on the chart context, you started taking:
+ 
+
+ 1. Allopurinol on January 5, 2024.
+ 2. Vitamin B12 over-the-counter supplement on December 28, 2023.
+ 
+
+ According to your notes, a maculopapular rash is suspected as a potential side effect of Allopurinol, but it's not mentioned as a common side effect for Vitamin B12.","Based on your medical records, here are the new items you started recently and the relevant notes regarding your rash:
+ 
+
+ **Recent Medications and Supplements:**
+ *  **""Vitamin B12""**
+  *  Start date: ""2023-12-28""
+  *  Note: ""Over the counter supplement""
+ *  **""Allopurinol""**
+  *  Start date: ""2024-01-05""
+  *  Note: ""Patient counseled on risk of skin rash; told to discontinue immediately if rash develops.""
+ 
+
+ **Record of Your Rash:**
+ *  Encounter date: ""2024-01-12""
+ *  Reason: ""Maculopapular rash on trunk""
+ *  Assessment: ""Suspected drug eruption secondary to Allopurinol""
+ 
+
+ **Recommendation:**
+ Because your notes state to ""discontinue immediately if rash develops"" and your recent encounter notes a ""Suspected drug eruption,"" please contact or see a doctor immediately for evaluation and instructions on managing your medication. I cannot provide a medical diagnosis or prescribe treatment.",
+Q023,,"{""labs"": [{""test"": ""eGFR"", ""date"": ""2021-04-10"", ""value"": 85}, {""test"": ""eGFR"", ""date"": ""2022-05-12"", ""value"": 82}, {""test"": ""eGFR"", ""date"": ""2023-06-15"", ""value"": 45}, {""test"": ""eGFR"", ""date"": ""2023-12-01"", ""value"": 48}], ""encounters"": [{""date"": ""2023-06-20"", ""provider_note"": ""Acute kidney injury noted, likely secondary to dehydration and recent heavy NSAID use. Advised to stop Ibuprofen immediately.""}]}",Hard,"Look at my kidney function (GFR) over the past three years. Is it declining steadily, or was there a sudden drop, and did the doctor mention it in their notes?","Yes, your estimated Glomerular Filtration Rate (eGFR) is declining steadily from 85 in April 2021 to 45 in December 2023. There was a significant decline noted as you moved from eGFR of 85 in April 2021 to 45 in June 2023, which indicates a sudden drop that corresponds with the acute kidney injury mentioned by the doctor. The doctor advised you to stop using Ibuprofen immediately following this event.","Your eGFR values show a significant decline from 2021 to 2023. Specifically:
+ 
+
+ - In April 2021, your eGFR was 85.
+ - By May 2022, it had dropped to 82.
+ - There is a notable drop in June 2023, where the eGFR value decreased to 45.
+ - In December 2023, your eGFR improved slightly to 48.
+ 
+
+ The doctor mentioned that you have an acute kidney injury likely caused by dehydration and recent heavy NSAID use. They advised stopping Ibuprofen immediately. Based on this information, the decline in eGFR appears to be sudden starting from June 2023, after a previous gradual decrease.","Based on the provided chart data, here's the analysis:
+ 
+
+ * The glomerular filtration rate (eGFR) values are as follows:
+  + 2021-04-10: 85
+  + 2022-05-12: 82
+  + 2023-06-15: 45
+  + 2023-12-01: 48
+ * The eGFR values show a decline over the past year, with a significant drop from 85 in April 2021 to 45 in June 2023 (approximately 47% decrease).
+ * There is no steady decline over the entire three-year period.","**eGFR Trend**
+ Your records show a sudden drop in your eGFR, rather than a steady decline:
+ * ""2021-04-10"": 85
+ * ""2022-05-12"": 82
+ * ""2023-06-15"": 45 (sudden drop)
+ * ""2023-12-01"": 48
+ 
+
+ *(Note: No units for these values are provided in the records).*
+ 
+
+ **Provider Notes**
+ Yes, the doctor addressed this drop. On ""2023-06-20"", the provider note states:
+ * ""Acute kidney injury noted, likely secondary to dehydration and recent heavy NSAID use.""
+ * ""Advised to stop Ibuprofen immediately.""
+ 
+
+ *Disclaimer: I cannot diagnose conditions or prescribe treatments. Because a significant drop in kidney function is a serious concern, please see a doctor if you have ongoing symptoms or questions about your kidney health.*",
+Q024,,"{""encounters"": [{""date"": ""2024-01-10"", ""provider"": ""Dr. Vance (Cardiology)"", ""instructions"": ""Hold Apixaban 48 hours prior to tooth extraction scheduled for 01/25/2024. Restart 24 hours post-procedure if no bleeding.""}], ""medications"": [{""name"": ""Apixaban"", ""dose"": ""5mg BID""}], ""procedures"": [{""name"": ""Tooth Extraction"", ""date"": ""2024-01-25"", ""status"": ""Scheduled""}]}",Hard,"My cardiologist told me to hold my blood thinner before my dental surgery, but I can't remember the exact instructions. What date is the surgery, which med do I hold, and when do I restart it?","The dental procedure is scheduled for January 25, 2024.
+ 
+
+ You are instructed to hold Apixaban, a blood thinner (5mg twice daily) prior to your tooth extraction on January 10, 2024. Restart the medication 24 hours post-procedure if no bleeding occurs.
+ 
+
+ The exact date of the surgery is January 25, 2024. You are instructed to hold Apixaban starting from January 10, 2024, and restart it 24 hours after your tooth extraction on January 25, 2024.","The scheduled date for your tooth extraction is 2024-01-25.
+ 
+
+ You are to hold Apixaban (5mg BID) for 48 hours prior to this surgery.
+ 
+
+ You should restart the Apixaban medication 24 hours after the procedure.","According to your medical records, the relevant information is as follows:
+ 
+
+ * The tooth extraction surgery is scheduled for: 2024-01-25.
+ * You should hold Apixaban, a blood thinner, 48 hours prior to the surgery.
+ * If there's no bleeding after the procedure, you should restart Apixaban 24 hours post-procedure.","Based on your medical records, here are the instructions from your cardiologist:
+ 
+
+ * **Surgery Date:** ""01/25/2024"" (listed in your records as ""2024-01-25"" for a ""Tooth Extraction"")
+ * **Medication to Hold:** ""Apixaban""
+ * **When to Hold:** ""48 hours prior"" to the procedure
+ * **When to Restart:** ""Restart 24 hours post-procedure if no bleeding.""
+ 
+
+ Please contact your doctor if you have any questions or serious concerns about your medication or the procedure.",
+Q025,,"{""procedures"": [{""name"": ""Chest X-Ray"", ""date"": ""2024-01-10"", ""report"": ""6mm indeterminate non-calcified nodule in the right lower lobe. Recommend non-contrast CT chest in 3 months for follow-up.""}], ""encounters"": [{""date"": ""2024-01-12"", ""note"": ""Discussed CXR findings with patient. Ordered follow-up CT.""}], ""future_appointments"": []}",Hard,"I read that my recent chest x-ray had a 'nodule'. What exactly did the radiologist say about it, and is there a follow-up CT scan scheduled?",The radiologist found a 6mm indeterminate non-calcified nodule in the right lower lobe. They recommended a non-contrast CT chest for follow-up within three months to monitor any changes or further evaluation of the nodule's characteristics.,"The radiologist noted a ""6mm indeterminate non-calcified nodule"" in your right lower lobe on the Chest X-Ray. They recommended that you have a Non-contrast CT chest done in three months for further evaluation.
+ 
+
+ Yes, you are scheduled for a follow-up CT scan.","According to your chart, the radiologist reported a ""6mm indeterminate non-calcified nodule in the right lower lobe"" on the January 10 Chest X-Ray. A follow-up non-contrast CT chest is recommended for 3 months to monitor the situation.","**Chest X-Ray Findings (""2024-01-10"")**
+ * **Radiologist's exact report:** ""6mm indeterminate non-calcified nodule in the right lower lobe. Recommend non-contrast CT chest in 3 months for follow-up.""
+ 
+
+ **Follow-Up CT Scan Status**
+ * **Provider Action (""2024-01-12""):** ""Ordered follow-up CT.""
+ * **Appointment Status:** Your records do not show any scheduled future appointments. The CT scan has been ordered, but a specific date is missing from your file.
+ 
+
+ **Recommendation**
+ Please contact your doctor's office to schedule your follow-up CT scan and to discuss any concerns regarding these findings.",
+Q026,,"{""procedures"": [{""name"": ""Lumbar Epidural Steroid Injection"", ""date"": ""2023-09-15"", ""location"": ""L4-L5""}, {""name"": ""Trigger Point Injections"", ""date"": ""2023-11-02"", ""location"": ""Lumbar paraspinals""}], ""encounters"": [{""date"": ""2023-10-01"", ""note"": ""Patient reports 50% reduction in radicular pain post-ESI.""}, {""date"": ""2023-12-10"", ""note"": ""Trigger point injections provided no significant relief. Pain remains 7/10.""}]}",Hard,"I am seeing a new physical therapist and they asked if my chronic back pain is responding to the new injection therapies. What injections have I had in the last 6 months, and did I report any pain relief in subsequent visits?","You have undergone two types of injection therapy within the past six months:
+ 
+
+ 1. **Lumbar Epidural Steroid Injection** on September 15, 2023.
+ 2. **Trigger Point Injections** on November 2, 2023.
+ 
+
+ Regarding pain relief:
+ - You reported a 50% reduction in radicular pain post the lumbar epidural steroid injection on October 1, 2023.
+ - Subsequent to that, you noted no significant relief from trigger point injections performed on December 10, 2023. Your pain rating remained at 7/10.","You have received two injections in the past six months:
+ 1. Lumbar Epidural Steroid Injection (L4-L5) on September 15, 2023.
+ 2. Trigger Point Injections on November 2, 2023.
+ 
+
+ In your subsequent visits, you reported a 50% reduction in radicular pain post-Lumbar Epidural Steroid Injection on October 1, 2023. However, the Trigger Point Injections did not provide significant relief with persistent pain at a level of 7/10 on December 10, 2023.","Based on the provided chart data:
+ 
+
+ You have received two injections in the last 6 months:
+ 1. Lumbar Epidural Steroid Injection (ESI) - performed on September 15, 2023
+ 2. Trigger Point Injections - performed on November 2, 2023
+ 
+
+ According to your records:
+ - On October 1, 2023, you reported a 50% reduction in radicular pain post-ESI.
+ - On December 10, 2023, you stated that trigger point injections provided no significant relief, with pain remaining at 7/10.","Based on your medical records, here are the recent injection therapies you received and the corresponding pain relief reported in subsequent visits. 
+ 
+
+ *Note: The provided records do not specify today's date to confirm if these occurred exactly within the ""last 6 months,"" but the available dates are listed below.*
+ 
+
+ **Injection 1: Lumbar Epidural Steroid Injection**
+ * **Date:** ""2023-09-15""
+ * **Location:** ""L4-L5""
+ * **Follow-up Visit:** ""2023-10-01""
+ * **Pain Relief Reported:** ""Patient reports 50% reduction in radicular pain post-ESI.""
+ 
+
+ **Injection 2: Trigger Point Injections**
+ * **Date:** ""2023-11-02""
+ * **Location:** ""Lumbar paraspinals""
+ * **Follow-up Visit:** ""2023-12-10""
+ * **Pain Relief Reported:** ""Trigger point injections provided no significant relief. Pain remains 7/10.""
+ 
+
+ Because your record indicates your pain remains at ""7/10"", please consult your doctor if you have serious concerns regarding ongoing pain management.",
+Q027,,"{""immunizations"": [{""vaccine"": ""Hepatitis B"", ""dates"": [""2010-02-10"", ""2010-03-15"", ""2010-08-20""], ""status"": ""Complete""}, {""vaccine"": ""Tdap"", ""date"": ""2015-06-12"", ""status"": ""Expired (Needs booster)""}, {""vaccine"": ""Influenza"", ""date"": ""2023-10-05"", ""status"": ""Up to date""}]}",Hard,"I need to send my vaccination records to my new employer. Do I have proof of my Hepatitis B series, a recent Tdap, and this year's flu shot in the app?","Yes, you have proof of your Hepatitis B series (vaccines administered on 2010-02-10, 2010-03-15, and 2010-08-20) being complete. However, the Tdap vaccination status is marked as ""Expired (Needs booster)"", indicating you need a booster dose. The flu shot for this year (2023-10-05) is up to date.","Your vaccination records show that you have proof of your Hepatitis B series (received on 2010-02-10, 2010-03-15, and 2010-08-20), a recent Tdap shot (on 2015-06-12 which has expired, needing a booster), but you do not have proof of a recent Tdap as it is expired. You also have proof of this year's flu shot on 2023-10-05, which is considered up to date.
+ 
+
+ Please provide the most recent Tdap vaccination documentation for your new employer.","According to your chart, you have:
+ 
+
+ * Proof of completion of your Hepatitis B series (all doses completed)
+ * A recorded Tdap vaccine administered on 2015-06-12
+ * Proof that you received your Influenza vaccine this year (2023) on 2023-10-05","Based on your records, here is the vaccination information available for your employer:
+ 
+
+ * **Hepatitis B**: Yes, the series is ""Complete"" with recorded dates of ""2010-02-10"", ""2010-03-15"", and ""2010-08-20"".
+ * **Tdap**: You do not have a recent Tdap. Your last recorded date is ""2015-06-12"" and the status is ""Expired (Needs booster)"". 
+ * **Influenza**: Yes, your flu shot is ""Up to date"" with a recorded date of ""2023-10-05"".
+ 
+
+ Because your Tdap vaccine is expired, you will need to see a doctor or visit a clinic to receive a booster.",
+Q028,,"{""diagnoses"": [{""condition"": ""Obstructive Sleep Apnea"", ""date"": ""2020-03-10""}], ""vitals"": [{""date"": ""2020-04-01"", ""weight"": ""210 lbs"", ""SpO2"": ""98%""}, {""date"": ""2022-05-15"", ""weight"": ""225 lbs"", ""SpO2"": ""97%""}, {""date"": ""2023-12-20"", ""weight"": ""245 lbs"", ""SpO2"": ""94%""}], ""procedures"": [{""name"": ""CPAP Titration Sleep Study"", ""date"": ""2020-03-25""}]}",Hard,"My sleep apnea has been getting worse. Have I gained a significant amount of weight since my CPAP was originally titrated in 2020, and has my daytime oxygen saturation changed?","Since your CPAP was first titrated on March 10th, 2020, you have gained about 35 lbs (from 210 to 245 lbs). Your SpO2 levels are consistent with obstructive sleep apnea and the progression of the condition. Specifically:
+ 
+
+ - On April 1st, 2020, your SpO2 was 98%.
+ - On May 15th, 2022, it dropped to 97% (no weight change).
+ - On December 20th, 2023, it further decreased to 94%.
+ 
+
+ This suggests that while you have gained weight over the past three years, your SpO2 has remained relatively stable. However, as a result of gaining significant weight, you may experience an increase in snoring and pauses in breathing at night, leading to more frequent sleep apnea episodes. This can potentially impact your overall health and quality of life.
+ 
+
+ Given that your CPAP titration is not mentioned for 2021 or later, I cannot determine the exact changes since then due to lack of information about a recent re-evaluation or titration date.","Since your CPAP Titration Sleep Study was conducted on March 25, 2020, and you have not provided any information about the patient's body weight before that date, I cannot determine if there was a significant weight gain since then. Your SpO2 levels were recorded at 98% on April 1, 2020 (after your CPAP titration), and at 97% and 94% in 2022 and 2023 respectively. The drop in SpO2 from 98% to 94% suggests that there may have been a decrease in your daytime oxygen saturation since the original titration date, but without knowing the patient's weight prior to 2020, we cannot definitively attribute this change solely to weight gain.","Based on the provided chart data:
+ 
+
+ 
+
+ You have gained approximately 35 lbs (from 210 lbs to 245 lbs) since your CPAP was originally titrated in 2020.
+ 
+
+ 
+
+ Regarding your daytime oxygen saturation, it appears that you had a SpO2 of 98% on April 1, 2020. On your most recent visit (December 20, 2023), your SpO2 was 94%.","Based on your medical records, here are the changes since your CPAP titration:
+ 
+
+ **Weight Change**
+ * **2020-03-25:** Date of your ""CPAP Titration Sleep Study"".
+ * **2020-04-01** (Shortly after titration): Weight was ""210 lbs"".
+ * **2023-12-20** (Most recent reading): Weight was ""245 lbs"". 
+ * **Result:** You have gained weight since 2020. 
+ 
+
+ **Oxygen Saturation (SpO2) Change**
+ * **2020-04-01:** SpO2 was ""98%"".
+ * **2022-05-15:** SpO2 was ""97%"".
+ * **2023-12-20:** SpO2 dropped to ""94%"".
+ * *Note on missing information:* Your records track ""SpO2"", but they do not explicitly specify whether these readings were taken during the daytime or nighttime.
+ 
+
+ Because you are experiencing worsening sleep apnea and your recent records show a drop in oxygen saturation to ""94%"", it is highly recommended that you see a doctor or sleep specialist to evaluate these changes.",
+Q029,,"{""encounters"": [{""date"": ""2024-01-14"", ""type"": ""Emergency Department"", ""diagnosis"": ""Mild Traumatic Brain Injury (Concussion)"", ""discharge_instructions"": ""Return to ER for worsening headache, vomiting, or confusion. Follow up with PCP in 1 week.""}], ""referrals"": [], ""medications"": [{""name"": ""Acetaminophen"", ""dose"": ""500mg as needed for pain""}, {""name"": ""Ondansetron"", ""dose"": ""4mg as needed for nausea""}]}",Hard,"The ER doctor said I had a concussion and should follow up if I have worsening headaches. I've had a headache for 3 days now. Is there a neurologist referral in my chart, and what are my current pain medications?","Based on the chart context provided, it appears you were initially diagnosed with a Concussion due to a Mild Traumatic Brain Injury (Concussion). You have been referred back to the Emergency Department for follow-up care. It is recommended that if your headache worsens or persists for more than 1 week, you should return.
+ 
+
+ As of now, there are no documented referrals to a neurologist in your medical chart, and your current pain medications include:
+ - Acetaminophen (500mg as needed) - for general pain management
+ - Ondansetron (4mg as needed) - for nausea
+ 
+
+ Since you have been experiencing headaches that have lasted for 3 days, it would be advisable to monitor the situation and consider contacting your physician or return to the Emergency Department if the headache continues.","There is no neurology referral in your chart. Your current pain medication is Acetaminophen at a dose of 500mg as needed for pain. If you have worsening headaches now, it's recommended that you return to the ER.","Based on the provided chart context, there is no neurologist referral.
+ 
+
+ Your current pain medication is Acetaminophen (500mg as needed for pain). 
+ 
+
+ You've had a headache for 3 days now, but this information isn't in your medical record.","**Neurologist Referral**
+ * There are no referrals listed in your medical records. 
+ 
+
+ **Current Pain Medications**
+ * ""Acetaminophen"" (""500mg as needed for pain"")
+ *(Note: Your chart also lists ""Ondansetron"" at ""4mg as needed for nausea"".)*
+ 
+
+ **Medical Alert**
+ * Your discharge instructions from the ""2024-01-14"" ""Emergency Department"" visit state to ""Return to ER for worsening headache, vomiting, or confusion."" Because you have had a headache for 3 days, please return to the ER or see a doctor immediately to have this evaluated.",
+Q030,,"{""medications"": [{""name"": ""Insulin Glargine (Lantus)"", ""dose"": ""20 units"", ""frequency"": ""Nightly"", ""start_date"": ""2023-01-10""}], ""labs"": [{""test"": ""Hemoglobin A1c"", ""date"": ""2023-01-05"", ""value"": ""9.5%""}, {""test"": ""Hemoglobin A1c"", ""date"": ""2023-06-10"", ""value"": ""8.2%""}, {""test"": ""Hemoglobin A1c"", ""date"": ""2023-12-15"", ""value"": ""7.9%""}], ""vitals"": [{""context"": ""Home Fasting Glucose logs (Jan 2024)"", ""average_value"": ""145 mg/dL"", ""range"": ""130 - 165 mg/dL""}]}",Hard,"I'm trying to control my diabetes better. Based on my last three A1c readings and my daily fasting blood sugars this month, is my current Lantus insulin dose of 20 units actually working?","Based on your last three Hemoglobin A1c readings (9.5% in January, 8.2% in June, and 7.9% in December), it appears that the dosage of 20 units of Insulin Glargine (Lantus) is working within the context of managing your diabetes. The recent reading shows a slight decrease from earlier months. It's important to note, however, that A1c levels are not a perfect measure for tracking blood sugar control and may vary due to other factors such as medication adherence and meal patterns.","Based on your most recent Hemoglobin A1c (HbA1c) results from June 10, 2023 (8.2%), December 15, 2023 (7.9%), and January 5, 2023 (9.5%), it appears that your HbA1c levels have been decreasing over time, indicating better blood glucose control.
+ 
+
+ Your daily fasting blood sugar readings indicate an average of 145 mg/dL with a range of 130 - 165 mg/dL. This is within the typical acceptable range for glycemic monitoring in diabetes management.
+ 
+
+ Given these observations, your current Lantus insulin dose of 20 units appears to be working and aligning with your ongoing HbA1c trend towards lower levels. However, it might be beneficial to consult with your healthcare provider to review this information and possibly adjust the insulin dose as needed for optimal diabetes management.","To assess the effectiveness of your current Lantus insulin dose, let's examine your recent A1c readings and fasting glucose values.
+ 
+
+ Your most recent A1c readings are:
+ 
+
+ * 2023-01-05: 9.5%
+ * 2023-06-10: 8.2%
+ * 2023-12-15: 7.9%
+ 
+
+ Although these values show an improvement, your A1c levels have not decreased significantly over time.
+ 
+
+ Regarding your daily fasting glucose logs (Jan 2024), the average value is 145 mg/dL with a range of 130 - 165 mg/dL.
+ 
+
+ Comparing your current insulin dose of 20 units to your recent data is challenging without more specific information about how these values relate to your blood glucose levels before treatment or other variables that may influence glucose control.","I cannot provide a medical assessment of whether your medication is working, as that requires a doctor's clinical judgment. Please consult your doctor to review these numbers and evaluate if your current dose is appropriate. 
+ 
+
+ Here is the data from your records tracking your progress:
+ 
+
+ **Current Medication**
+ * Medication: ""Insulin Glargine (Lantus)""
+ * Dose: ""20 units"" ""Nightly""
+ * Start Date: ""2023-01-10""
+ 
+
+ **""Hemoglobin A1c"" Trends** (Started decreasing after beginning Lantus)
+ * ""2023-01-05"": ""9.5%"" 
+ * ""2023-06-10"": ""8.2%""
+ * ""2023-12-15"": ""7.9%""
+ 
+
+ **Recent Vitals**
+ * Context: ""Home Fasting Glucose logs (Jan 2024)""
+ * Average: ""145 mg/dL""
+ * Range: ""130 - 165 mg/dL""
+ 
+
+ *Note: Your medical records contain your lab and vital results, but they do not specify your personalized target A1c or fasting glucose goals, which your doctor will need to determine if the treatment is fully effective.*",
