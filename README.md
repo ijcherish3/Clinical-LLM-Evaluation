@@ -30,8 +30,7 @@ Overall quality was calculated as the mean of these six dimensions.
 - `code/` — Analysis pipeline and statistical testing
 - `data/` — Synthetic evaluation data and data documentation
 - `results/` — Evaluation results and figures
-- `references/` — Supporting references
-- `presentation/` — Project presentation
+- `presentation/` — Project presentation with supporting references
 
 ## Future Work
 
