@@ -27,9 +27,11 @@ Overall quality was calculated as the mean of these six dimensions.
 
 ## Repository Contents
 
-- `code/` — Analysis and statistical testing
-- `results/` — Figures and results
+- `code/` — Analysis pipeline and statistical testing
+- `data/` — Synthetic evaluation data and data documentation
+- `results/` — Evaluation results and figures
 - `references/` — Supporting references
+- `presentation/` — Project presentation
 
 ## Future Work
 
